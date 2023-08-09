@@ -1,0 +1,15 @@
+LogisticRegression:
+    classpath: sklearn.linear_model.LogisticRegression
+    kwargs:
+        penalty:
+            - "l2"
+
+        class_weight:
+            - "balanced"
+        
+        solver:
+            - "newton-cholesky"
+
+        max_iter:
+            type: int
+            range: [50,1000]
