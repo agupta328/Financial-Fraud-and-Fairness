@@ -1,0 +1,37 @@
+LightGBM:
+    classpath: lightgbm.LGBMClassifier
+    kwargs:
+        n_estimators:
+            type: int
+            range: [ 5, 500 ]
+            log: False
+        
+        max_depth:
+            type: int
+            range: [ 50, 500 ]
+        
+        learning_rate:
+            type: float
+            range: [ 0.0005, 0.2 ]
+            log: False
+
+        num_leaves:
+            type: int
+            range: [ 100, 10000 ]
+            log: False
+
+        boosting_type:
+            - "goss"
+
+        min_data_in_leaf:
+            type: int
+            range: [ 2, 50 ]
+            log: False
+
+        max_bin:
+            type: int
+            range: [ 100, 500 ]
+
+        enable_bundle:
+            - True
+            
